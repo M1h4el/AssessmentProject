@@ -1,6 +1,8 @@
 export class CreateTaskDto {
-    title: string;
+  title: string;
   description: string;
   status?: string = 'PENDING';
-  dueDate: Date;
+  createDate: Date;
+  limitDate?: Date;
+  usersTaskAssigned: [];
 }

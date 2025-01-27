@@ -3,4 +3,5 @@ export class CreateProjectDto {
     description:string
     status?:string = "PENDING"
     dueDate: Date;
+    usersProject: []
 }

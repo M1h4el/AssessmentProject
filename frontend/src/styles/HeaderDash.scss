@@ -1,24 +1,43 @@
-@use './LogBar.scss' as *;
+@use "./LogBar.scss" as *;
 
 header {
-    @include flexing(null, space-between, center);
-    background-color: $primary-color;
-    height: 100px;
-    
-    .menuBar {
-        @include flexing(null, center, center);
-        height: 100%;
-        gap: 0;
-        width: auto;
+  @include flexing(null, space-between, center);
+  background-color: $primary-color;
+  height: 100px;
 
-        div {
-            @include flexing(null, center, center);
-            height: 100%;
-            width: 100px;
-            
-            &:hover {
-                background-color: gray;
-            }
+  .menuBar {
+    @include flexing(null, center, center);
+    height: 100%;
+    gap: 0;
+    width: auto;
+
+    div {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      height: 100%;
+      width: 100px;
+
+      svg {
+        transition: transform 0.3s ease; // Añadimos transición para el transform
+      }
+
+      &:hover {
+        svg {
+          transform: scale(1.5); // Incremento progresivo del tamaño
         }
+      }
+
+      &.active {
+        background-color: gray;
+
+        svg {
+          transform: scale(1.5); // También aplicamos el efecto al estado activo
+        }
+      }
     }
+  }
 }
