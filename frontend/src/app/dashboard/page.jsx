@@ -1,38 +1,41 @@
 "use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import HeaderDash from "./HeaderDash";
+
+// Components
+import ProfileContent from './ProfileContent';
+import NotificationContent from './NotificationsContent';
+import SocialContent from './SocialContent';
+import ProjectsContent from './ProjectContent';
 import BodyDashboard from "@/components/BodyDashboard";
 
 const Page = () => {
-  const [displayContent, setDisplayContent] = useState("Seleccione una opción");
+  const [displayContent, setDisplayContent] = useState(<ProjectsContent />);
 
-  const handleIconSelect = (tab) => {
+  const handleSelection = (tab) => {
     switch (tab) {
-      case "users":
-        setDisplayContent("Gestión de usuarios");
+      case "projects":
+        setDisplayContent(<ProjectsContent />);
         break;
-      case "messages":
-        setDisplayContent("Proyectos");
+      case "users":
+        setDisplayContent(<SocialContent />);
         break;
       case "notifications":
-        setDisplayContent("Notificaciones");
+        setDisplayContent(<NotificationContent />);
         break;
       case "profile":
-        setDisplayContent("Perfil de usuario");
+        setDisplayContent(<ProfileContent />);
         break;
       default:
-        setDisplayContent("Seleccione una opción");
+        setDisplayContent(<ProjectsContent />);
+        break;
     }
   };
 
   return (
     <>
-      <HeaderDash onSelect={handleIconSelect} />
-      <BodyDashboard
-        menuSideChildren={<div>Contenido del Menú Lateral</div>}
-        displaySideChildren={<div>{displayContent}</div>}
-      />
+      <HeaderDash onSelect={handleSelection} />
+      <BodyDashboard displaySideChildren={displayContent}/>
     </>
   );
 };

@@ -4,17 +4,16 @@ import { useState } from "react";
 import "@/styles/bodyDashboard.scss";
 
 const BodyDashboard = ({ menuSideChildren, displaySideChildren }) => {
-  const [menuWidth, setMenuWidth] = useState(15); // Porcentaje inicial de menuSide
+  const [menuWidth, setMenuWidth] = useState(15);
 
   const handleMouseDown = (e) => {
-    e.preventDefault(); // Evitar comportamientos predeterminados
-    const startX = e.clientX; // Posición inicial del mouse
-    const startWidth = menuWidth; // Ancho inicial del menú en porcentaje
+    e.preventDefault();
+    const startX = e.clientX; 
+    const startWidth = menuWidth;
 
     const onMouseMove = (e) => {
       const diff = e.clientX - startX; 
       let newWidth = startWidth + (diff / window.innerWidth) * 100;
-      // regula el tamaño del menu lateral
       if (newWidth < 15) newWidth = 15;
       if (newWidth > 22) newWidth = 22;
       

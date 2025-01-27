@@ -1,0 +1,23 @@
+@use "./LogBar.scss" as *;
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+hr {
+    width: 100%;
+}
+
+section {
+    @include flexing(null, flex-start, center);
+    .TitleProjectSection {
+        @include flexing(column, center, flex-start);
+        width: 100%;
+        
+    }
+}
