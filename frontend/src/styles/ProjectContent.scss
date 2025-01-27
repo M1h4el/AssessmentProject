@@ -14,10 +14,18 @@ hr {
 }
 
 section {
+    height: auto;
     @include flexing(null, flex-start, center);
     .TitleProjectSection {
         @include flexing(column, center, flex-start);
         width: 100%;
         
+    }
+    .MenuProjectSection {
+        height: 100%;
+        width: 100%;
+        .ProjectCard {
+            
+        }
     }
 }
