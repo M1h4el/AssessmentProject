@@ -1,0 +1,24 @@
+@use './LogBar.scss' as *;
+
+header {
+    @include flexing(null, space-between, center);
+    background-color: $primary-color;
+    height: 100px;
+    
+    .menuBar {
+        @include flexing(null, center, center);
+        height: 100%;
+        gap: 0;
+        width: auto;
+
+        div {
+            @include flexing(null, center, center);
+            height: 100%;
+            width: 100px;
+            
+            &:hover {
+                background-color: gray;
+            }
+        }
+    }
+}

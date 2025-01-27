@@ -1,0 +1,54 @@
+
+// Variables
+$primary-color: #bdb9b9;
+$button-background: #0070f3;
+
+// Mixins
+@mixin buttons ($backColor, $fontColor, $padd, $marg) {
+  background-color: $backColor;
+  color: $fontColor;
+  padding: nth($padd, 1) nth($padd, 2);
+  margin: $marg;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: $backColor;
+  &:hover {
+    background-color: #005bb5;
+  }
+}
+
+@mixin flexing ($directioning:null, $jusfying:null, $align0:null) {
+  display: flex;
+  flex-direction: $directioning;
+  justify-content: $jusfying;
+  align-items: $align0;
+}
+
+.login-container {
+    @include flexing(null, space-between, center);
+    background-color: $primary-color;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    
+    .login-title {
+      font-size: 2rem;
+      color: #333;
+      text-align: center;
+    }
+    
+    button {
+      @include buttons($button-background, white, (20px, 70px), 0)
+    }
+
+    form {
+      @include flexing(null, center, center );
+      gap: 40px;
+    }
+    
+  }
+  
+  
+  
