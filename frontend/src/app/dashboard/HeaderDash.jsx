@@ -31,25 +31,25 @@ function HeaderDash({ onSelect }) {
           className={activeTab === "projects" ? "active" : ""}
           onClick={() => handleIconClick("projects")}
         >
-          <GoProjectSymlink />
+          <GoProjectSymlink style={{color:'black'}} />
         </div>
         <div
           className={activeTab === "users" ? "active" : ""}
           onClick={() => handleIconClick("users")}
         >
-          <FaUsers />
+          <FaUsers style={{color:'black'}}/>
         </div>
         <div
           className={activeTab === "notifications" ? "active" : ""}
           onClick={() => handleIconClick("notifications")}
         >
-          <MdNotificationsActive />
+          <MdNotificationsActive style={{color:'black'}}/>
         </div>
         <div
           className={activeTab === "profile" ? "active" : ""}
           onClick={() => handleIconClick("profile")}
         >
-          <FaRegUserCircle />
+          <FaRegUserCircle style={{color:'black'}}/>
         </div>
       </div>
     </header>

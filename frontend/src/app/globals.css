@@ -31,8 +31,28 @@ body {
 }
 
 a {
-  color: inherit;
+  color: black;
   text-decoration: none;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
+
+div {
+  color: black;
 }
 
 @media (prefers-color-scheme: dark) {

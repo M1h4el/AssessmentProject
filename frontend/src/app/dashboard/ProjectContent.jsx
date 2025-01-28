@@ -49,7 +49,7 @@ function ProjectContent({ children }) {
           {/* <TbNewSection /> */}
           <Grid2 container spacing={2} justifyContent="flex-start" alignItems="center" sx={{ padding: 2 }}>
       {cardData.map((card, index) => (
-        <Grid2 item xs={12} sm={6} md={6} key={index}>
+        <Grid2 xs={12} sm={6} md={6} key={index}>
           <ProjectCard
             title={card.title}
             description={card.description}

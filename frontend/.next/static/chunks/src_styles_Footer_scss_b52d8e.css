@@ -1,0 +1,78 @@
+/* [project]/src/styles/Footer.scss.css [app-client] (css) */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Roboto, sans-serif;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+footer .footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .footer-links ul li {
+  margin-bottom: 10px;
+}
+
+footer .footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color .3s;
+}
+
+footer .footer-links ul li a:hover {
+  color: #58a6ff;
+}
+
+footer .footer-social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .footer-social ul li {
+  margin-bottom: 10px;
+}
+
+footer .footer-social ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color .3s;
+}
+
+footer .footer-social ul li a:hover {
+  color: #58a6ff;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+footer .footer-bottom p {
+  margin: 0;
+}
+
+@media (width <= 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-links, footer .footer-social {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=src_styles_Footer_scss_b52d8e.css.map*/

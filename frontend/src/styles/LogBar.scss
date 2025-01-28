@@ -1,4 +1,4 @@
-
+@use 'sass:list';
 // Variables
 $primary-color: #bdb9b9;
 $button-background: #0070f3;
@@ -7,7 +7,7 @@ $button-background: #0070f3;
 @mixin buttons ($backColor, $fontColor, $padd, $marg) {
   background-color: $backColor;
   color: $fontColor;
-  padding: nth($padd, 1) nth($padd, 2);
+  padding: list.nth($padd, 1) list.nth($padd, 2);
   margin: $marg;
   border: none;
   border-radius: 5px;

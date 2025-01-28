@@ -22,12 +22,12 @@ header {
       width: 100px;
 
       svg {
-        transition: transform 0.3s ease; // Añadimos transición para el transform
+        transition: transform 0.3s ease;
       }
 
       &:hover {
         svg {
-          transform: scale(1.5); // Incremento progresivo del tamaño
+          transform: scale(1.5);
         }
       }
 
@@ -35,7 +35,7 @@ header {
         background-color: gray;
 
         svg {
-          transform: scale(1.5); // También aplicamos el efecto al estado activo
+          transform: scale(1.5);
         }
       }
     }

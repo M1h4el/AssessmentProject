@@ -6,7 +6,7 @@
   
   .menuSide {
     background-color: #f1f1f1;
-    min-width: 5%; // Mínimo 5% para menuSide
+    min-width: 5%;
   }
   
   .displaySide {
@@ -19,6 +19,5 @@
   .resizer {
     cursor: ew-resize;
     background-color: #aaa;
-    width: 5px; // Espacio para el cursor de arrastre
-    height: 100%;
+    width: 5px;
   }
