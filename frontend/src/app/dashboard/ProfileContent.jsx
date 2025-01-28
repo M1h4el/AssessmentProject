@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function ProfileContent() {
   return (
-    <div>ProfileContent</div>
-  )
+    <>
+      <h1>Perfil</h1>
+      <h4>Administra tu perfil de Usuario</h4>
+      <hr />
+    </>
+  );
 }
 
-export default ProfileContent
+export default ProfileContent;

@@ -3,10 +3,17 @@ import { Card, CardActionArea, CardMedia, CardContent, Typography, CardActions, 
 
 const ProjectCard = ({ title, description, image, alt }) => {
   return (
-    <Card sx={{ maxWidth: 250, height: 350, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        height: "100%", // Ajusta al tamaño del contenedor
+      }}
+    >
       <CardActionArea>
         <CardMedia component="img" height="140" image={image} alt={alt} />
-        <CardContent sx={{ minHeight: 100 }}>
+        <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>

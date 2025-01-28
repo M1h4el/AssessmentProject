@@ -17,9 +17,9 @@ hr {
 section {
     height: auto;
     @include flexing(null, flex-start, center);
-    .TitleProjectSection {
+    .TitleSection {
         @include flexing(column, center, flex-start);
-        width: 100%;
+        width: 97%;
         
     }
     .MenuProjectSection {

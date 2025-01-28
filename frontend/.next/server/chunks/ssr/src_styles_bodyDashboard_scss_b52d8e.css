@@ -1,4 +1,8 @@
 /* [project]/src/styles/bodyDashboard.scss.css [app-client] (css) */
+section {
+  width: 100%;
+}
+
 .bodyDashboard {
   display: flex;
   width: 100%;
@@ -8,6 +12,7 @@
 .menuSide {
   background-color: #f1f1f1;
   min-width: 5%;
+  position: relative;
 }
 
 .displaySide {

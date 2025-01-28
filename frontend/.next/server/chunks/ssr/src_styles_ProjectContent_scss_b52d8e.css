@@ -59,12 +59,12 @@ section {
   align-items: center;
 }
 
-section .TitleProjectSection {
+section .TitleSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 97%;
 }
 
 section .MenuProjectSection {

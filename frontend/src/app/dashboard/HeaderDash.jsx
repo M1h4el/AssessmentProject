@@ -2,12 +2,6 @@
 import React, { useState } from "react";
 import "@/styles/HeaderDash.scss";
 
-// Components
-import ProfileContent from './ProfileContent';
-import NotificationContent from './NotificationsContent';
-import SocialContent from './SocialContent';
-import ProjectsContent from './ProjectContent';
-
 // React-icons
 import { MdNotificationsActive } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
@@ -34,8 +28,8 @@ function HeaderDash({ onSelect }) {
           <GoProjectSymlink style={{color:'black'}} />
         </div>
         <div
-          className={activeTab === "users" ? "active" : ""}
-          onClick={() => handleIconClick("users")}
+          className={activeTab === "social" ? "active" : ""}
+          onClick={() => handleIconClick("social")}
         >
           <FaUsers style={{color:'black'}}/>
         </div>

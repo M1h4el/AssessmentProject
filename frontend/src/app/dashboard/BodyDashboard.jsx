@@ -2,9 +2,26 @@
 
 import { useState } from "react";
 import "@/styles/bodyDashboard.scss";
+import ProjectsContent from './ProjectContent';
+import ProfileContent from './ProfileContent';
+import NotificationContent from './NotificationsContent';
+import SocialContent from './SocialContent';
+import SideMenuContent from "./SideMenuContent";
 
-const BodyDashboard = ({ menuSideChildren, displaySideChildren }) => {
+const BodyDashboard = ({ handleCard, selectedTab }) => {
   const [menuWidth, setMenuWidth] = useState(15);
+
+  const handleTab = (selectedTab) => {
+    if (selectedTab === "projects") {
+      return <ProjectsContent handleCard={handleCard} />;
+    } else if (selectedTab === "social") {
+      return <SocialContent />;
+    } else if (selectedTab === "notifications") {
+      return <NotificationContent />;
+    } else if (selectedTab === "profile") {
+      return <ProfileContent />;;
+    }
+  }
 
   const handleMouseDown = (e) => {
     e.preventDefault();
@@ -29,14 +46,16 @@ const BodyDashboard = ({ menuSideChildren, displaySideChildren }) => {
     document.addEventListener("mouseup", onMouseUp);
   };
 
+ 
+
   return (
     <div className="bodyDashboard">
       <div className="menuSide" style={{ width: `${menuWidth}%` }}>
-        {menuSideChildren}
+        {handleCard ? <SideMenuContent tab={selectedTab}/> : <div>Logo</div>}
       </div>
       <div className="resizer" onMouseDown={handleMouseDown}></div>
       <div className="displaySide" style={{ width: `${100 - menuWidth}%` }}>
-        {displaySideChildren}
+        {handleTab(selectedTab)}
       </div>
     </div>
   );

@@ -3,39 +3,25 @@ import React, { useState } from "react";
 import HeaderDash from "./HeaderDash";
 
 // Components
-import ProfileContent from './ProfileContent';
-import NotificationContent from './NotificationsContent';
-import SocialContent from './SocialContent';
-import ProjectsContent from './ProjectContent';
-import BodyDashboard from "@/components/BodyDashboard";
+import BodyDashboard from "./BodyDashboard";
 
 const Page = () => {
-  const [displayContent, setDisplayContent] = useState(<ProjectsContent />);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedTab, setselectedTab] = useState("projects");
+
+  const handleCard = (card) => {
+    setSelectedCard(card.id);
+    console.log("Datos de la Card ", card);
+  }
 
   const handleSelection = (tab) => {
-    switch (tab) {
-      case "projects":
-        setDisplayContent(<ProjectsContent />);
-        break;
-      case "users":
-        setDisplayContent(<SocialContent />);
-        break;
-      case "notifications":
-        setDisplayContent(<NotificationContent />);
-        break;
-      case "profile":
-        setDisplayContent(<ProfileContent />);
-        break;
-      default:
-        setDisplayContent(<ProjectsContent />);
-        break;
-    }
+    setselectedTab(tab);
   };
 
   return (
     <>
       <HeaderDash onSelect={handleSelection} />
-      <BodyDashboard displaySideChildren={displayContent}/>
+      <BodyDashboard handleCard={handleCard} selectedTab={selectedTab}/>
     </>
   );
 };

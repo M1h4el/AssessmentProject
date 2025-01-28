@@ -218,31 +218,32 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 ;
 const cardData = [
     {
-        title: "New Project",
-        description: "Here you can start your new project",
-        image: "/static/images/cards/contemplative-reptile.jpg",
-        alt: "NewProject"
+        id: 1,
+        title: "Card 1",
+        description: "Description 1",
+        image: "image1.jpg",
+        alt: "image 1"
     },
     {
-        title: "ProjectCreated",
-        description: "Geckos are small, mostly carnivorous lizards.",
-        image: "/static/images/cards/contemplative-reptile.jpg",
-        alt: "gecko"
+        id: 2,
+        title: "Card 2",
+        description: "Description 2",
+        image: "image2.jpg",
+        alt: "image 2"
     },
     {
-        title: "ProjectCreated",
-        description: "Chameleons are distinguished by their zygodactylous feet and long, sticky tongues.",
-        image: "/static/images/cards/contemplative-reptile.jpg",
-        alt: "chameleon"
-    },
-    {
-        title: "ProjectCreated",
-        description: "Iguanas are herbivorous lizards native to tropical areas of Central and South America.",
-        image: "/static/images/cards/contemplative-reptile.jpg",
-        alt: "iguana"
+        id: 3,
+        title: "Card 3",
+        description: "Description 3",
+        image: "image3.jpg",
+        alt: "image 3"
     }
 ];
-function ProjectContent({ children }) {
+function ProjectContent({ handleCard }) {
+    function handleCardClick(card) {
+        handleCard(card);
+    }
+    ;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -253,78 +254,76 @@ function ProjectContent({ children }) {
                             children: "Proyectos"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                            lineNumber: 42,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                             children: "Crea y planifica tus proyectos"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                            lineNumber: 43,
+                            lineNumber: 26,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                             fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                            lineNumber: 44,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                    lineNumber: 41,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                lineNumber: 40,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "MenuProjectSection",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid2$2f$Grid2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid2$3e$__["Grid2"], {
-                            container: true,
-                            spacing: 2,
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                            sx: {
-                                padding: 2
-                            },
-                            children: cardData.map((card, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid2$2f$Grid2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid2$3e$__["Grid2"], {
-                                    xs: 12,
-                                    sm: 6,
-                                    md: 6,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ProjectCard$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        title: card.title,
-                                        description: card.description,
-                                        image: card.image,
-                                        alt: card.alt
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                                        lineNumber: 53,
-                                        columnNumber: 11
-                                    }, this)
-                                }, index, false, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "MenuProjectSection",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid2$2f$Grid2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid2$3e$__["Grid2"], {
+                        container: true,
+                        spacing: 2,
+                        justifyContent: "flex-start",
+                        alignItems: "center",
+                        sx: {
+                            padding: 2
+                        },
+                        children: cardData.map((card)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Grid2$2f$Grid2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid2$3e$__["Grid2"], {
+                                xs: 12,
+                                sm: 6,
+                                md: 6,
+                                onClick: ()=>handleCardClick(card.id),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ProjectCard$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    title: card.title,
+                                    description: card.description,
+                                    image: card.image,
+                                    alt: card.alt
+                                }, void 0, false, {
                                     fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                                    lineNumber: 52,
-                                    columnNumber: 9
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                            lineNumber: 50,
-                            columnNumber: 11
-                        }, this)
+                                    lineNumber: 36,
+                                    columnNumber: 11
+                                }, this)
+                            }, card.id, false, {
+                                fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
+                                lineNumber: 35,
+                                columnNumber: 9
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                        lineNumber: 48,
-                        columnNumber: 9
-                    }, this),
-                    children
-                ]
-            }, void 0, true, {
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
+                    lineNumber: 31,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/ProjectContent.jsx",
-                lineNumber: 47,
+                lineNumber: 30,
                 columnNumber: 7
             }, this)
         ]
@@ -491,14 +490,51 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProjectContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/dashboard/ProjectContent.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
 ;
 ;
-const BodyDashboard = ({ menuSideChildren, displaySideChildren })=>{
+;
+const BodyDashboard = ({ menuSideChildren, handleCard, selectedCardF, selectedTab })=>{
     _s();
     const [menuWidth, setMenuWidth] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(15);
+    const handleTab = (selectedTab)=>{
+        if (selectedTab === "projects") {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProjectContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                handleCard: handleCard
+            }, void 0, false, {
+                fileName: "[project]/src/components/BodyDashboard.jsx",
+                lineNumber: 12,
+                columnNumber: 14
+            }, this);
+        } else if (selectedTab === "users") {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: "Users"
+            }, void 0, false, {
+                fileName: "[project]/src/components/BodyDashboard.jsx",
+                lineNumber: 14,
+                columnNumber: 14
+            }, this);
+        } else if (selectedTab === "notifications") {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: "Notifications"
+            }, void 0, false, {
+                fileName: "[project]/src/components/BodyDashboard.jsx",
+                lineNumber: 16,
+                columnNumber: 14
+            }, this);
+        } else if (selectedTab === "profile") {
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: "Profile"
+            }, void 0, false, {
+                fileName: "[project]/src/components/BodyDashboard.jsx",
+                lineNumber: 18,
+                columnNumber: 14
+            }, this);
+        }
+    };
     const handleMouseDown = (e)=>{
         e.preventDefault();
         const startX = e.clientX;
@@ -525,10 +561,16 @@ const BodyDashboard = ({ menuSideChildren, displaySideChildren })=>{
                 style: {
                     width: `${menuWidth}%`
                 },
-                children: menuSideChildren
+                children: selectedCardF ? menuSideChildren : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: "Logo"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/BodyDashboard.jsx",
+                    lineNumber: 50,
+                    columnNumber: 45
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BodyDashboard.jsx",
-                lineNumber: 34,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -536,7 +578,7 @@ const BodyDashboard = ({ menuSideChildren, displaySideChildren })=>{
                 onMouseDown: handleMouseDown
             }, void 0, false, {
                 fileName: "[project]/src/components/BodyDashboard.jsx",
-                lineNumber: 37,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -544,16 +586,16 @@ const BodyDashboard = ({ menuSideChildren, displaySideChildren })=>{
                 style: {
                     width: `${100 - menuWidth}%`
                 },
-                children: displaySideChildren
+                children: handleTab
             }, void 0, false, {
                 fileName: "[project]/src/components/BodyDashboard.jsx",
-                lineNumber: 38,
+                lineNumber: 53,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BodyDashboard.jsx",
-        lineNumber: 33,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 };
@@ -595,49 +637,14 @@ var _s = __turbopack_refresh__.signature();
 ;
 const Page = ()=>{
     _s();
-    const [displayContent, setDisplayContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProjectContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-        fileName: "[project]/src/app/dashboard/page.jsx",
-        lineNumber: 13,
-        columnNumber: 56
-    }, this));
+    const [selectedCard, setSelectedCard] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [selectedTab, setselectedTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const handleCard = (card)=>{
+        setSelectedCard(card);
+        console.log("Card selected: ", card);
+    };
     const handleSelection = (tab)=>{
-        switch(tab){
-            case "projects":
-                setDisplayContent(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProjectContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/app/dashboard/page.jsx",
-                    lineNumber: 18,
-                    columnNumber: 27
-                }, this));
-                break;
-            case "users":
-                setDisplayContent(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$SocialContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/app/dashboard/page.jsx",
-                    lineNumber: 21,
-                    columnNumber: 27
-                }, this));
-                break;
-            case "notifications":
-                setDisplayContent(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$NotificationsContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/app/dashboard/page.jsx",
-                    lineNumber: 24,
-                    columnNumber: 27
-                }, this));
-                break;
-            case "profile":
-                setDisplayContent(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProfileContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/app/dashboard/page.jsx",
-                    lineNumber: 27,
-                    columnNumber: 27
-                }, this));
-                break;
-            default:
-                setDisplayContent(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$dashboard$2f$ProjectContent$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/app/dashboard/page.jsx",
-                    lineNumber: 30,
-                    columnNumber: 27
-                }, this));
-                break;
-        }
+        setselectedTab(tab);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -645,20 +652,23 @@ const Page = ()=>{
                 onSelect: handleSelection
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.jsx",
-                lineNumber: 37,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BodyDashboard$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                displaySideChildren: displayContent
+                handleCard: handleCard,
+                menuSideChildren: selectedCard,
+                selectedCardF: selectedCard,
+                selectedTab: selectedTab
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.jsx",
-                lineNumber: 38,
+                lineNumber: 28,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 };
-_s(Page, "gSgUaO4m5CphhXNXRcr3kpG7yG4=");
+_s(Page, "lMXsp9yMQBFgO2kwulp/oyZ6rBQ=");
 _c = Page;
 const __TURBOPACK__default__export__ = Page;
 var _c;
