@@ -139,6 +139,63 @@ div {
 
 
 /* [project]/src/styles/Footer.scss.css [app-client] (css) */
+input {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 8px;
+  border: 1px solid #726e6e;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.header-container {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4d4d60;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container .Logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-container .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-container .login-title {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.header-container .login-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-container .login-form .login-button {
+  background-color: #856825;
+  color: #fff;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.header-container .login-form .login-button:hover {
+  background-color: #684f1f;
+}
+
 footer {
   background-color: #333;
   color: #fff;
@@ -149,13 +206,18 @@ footer {
 footer .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-footer .footer-links ul {
+footer ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 footer .footer-links ul li {
@@ -180,17 +242,11 @@ footer .footer-social ul {
 
 footer .footer-social ul li {
   margin-bottom: 10px;
+  transition: scale .3s;
 }
 
-footer .footer-social ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color .3s;
-}
-
-footer .footer-social ul li a:hover {
-  color: #58a6ff;
+footer .footer-social ul li:hover {
+  scale: 1.3;
 }
 
 footer .footer-bottom {

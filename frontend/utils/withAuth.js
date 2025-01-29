@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 const withAuth = (WrappedComponent) => {
   return (props) => {
     const router = useRouter();
-    const [isAuthenticated, setIsAuthenticated] = useState(null); // Estado inicial como `null` para esperar validación
+    const [isAuthenticated, setIsAuthenticated] = useState(null);
 
     useEffect(() => {
       const token = localStorage.getItem("jwt");
@@ -13,12 +13,12 @@ const withAuth = (WrappedComponent) => {
       if (!token) {
         router.replace("/");
       } else {
-        setIsAuthenticated(true); // Usuario autenticado
+        setIsAuthenticated(true);
       }
     }, []);
 
     if (isAuthenticated === null) {
-      return <p>Cargando...</p>; // Evita renderizar el contenido hasta validar el token
+      return <p>Cargando...</p>;
     }
 
     return <WrappedComponent {...props} />;

@@ -58,8 +58,8 @@ const LoginForm = () => {
 
   return (
     <header className="header-container">
+      <div className="Logo">LOGO</div>
       <div className="login-wrapper">
-        <h2 className="login-title">Iniciar sesión</h2>
         <form className="login-form" onSubmit={handleForm}>
           <input
             type="text"

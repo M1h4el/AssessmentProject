@@ -1,7 +1,19 @@
 import React from "react";
 import "../styles/Footer.scss";
 
+import {
+  TiSocialInstagram,
+  TiSocialTwitter,
+  TiSocialFacebook,
+  TiSocialLinkedin,
+} from "react-icons/ti";
+
 function Footer() {
+
+  const styleObj = {
+    color: "whitesmoke",
+    fontSize: 30
+  }
   return (
     <footer>
       <div className="footer-container">
@@ -24,16 +36,16 @@ function Footer() {
         <div className="footer-social">
           <ul>
             <li>
-              <a href="#">Facebook</a>
+              <TiSocialFacebook style={styleObj} />
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <TiSocialInstagram style={styleObj}/>
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <TiSocialTwitter style={styleObj}/>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <TiSocialLinkedin style={styleObj}/>
             </li>
           </ul>
         </div>

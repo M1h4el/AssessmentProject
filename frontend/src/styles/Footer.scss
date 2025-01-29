@@ -1,4 +1,5 @@
-/* Footer Styles */
+@use "./LogBar.scss" as logbar;
+
 footer {
   background-color: #333;
   color: #fff;
@@ -6,16 +7,21 @@ footer {
   font-family: "Roboto", sans-serif;
 
   .footer-container {
-    display: flex;
-    justify-content: space-between;
+    @include logbar.flexing(null, space-between, center);
     flex-wrap: wrap;
     gap: 30px;
   }
 
+  ul {
+    list-style-type: none;
+      padding: 0;
+      @include logbar.flexing(null, center, center);
+      gap: 15px;
+  }
+
   .footer-links {
     ul {
-      list-style-type: none;
-      padding: 0;
+      
 
       li {
         margin-bottom: 10px;
@@ -40,16 +46,9 @@ footer {
 
       li {
         margin-bottom: 10px;
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          font-size: 16px;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: #58a6ff; /* Light blue hover effect */
-          }
+        transition: scale 0.3s ease;
+        &:hover {
+          scale: 1.3;
         }
       }
     }

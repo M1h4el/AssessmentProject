@@ -1,4 +1,4 @@
-/* [project]/src/styles/HeaderDash.scss.css [app-client] (css) */
+/* [project]/src/styles/LogBar.scss.css [app-client] (css) */
 input {
   background-color: #f5f5f5;
   color: #000;
@@ -56,173 +56,110 @@ input {
   background-color: #684f1f;
 }
 
-header {
+
+/* [project]/src/styles/RegisterForm.scss.css [app-client] (css) */
+input {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 8px;
+  border: 1px solid #726e6e;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.header-container {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4d4d60;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.header-container .Logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-container .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-container .login-title {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.header-container .login-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-container .login-form .login-button {
+  background-color: #856825;
+  color: #fff;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.header-container .login-form .login-button:hover {
+  background-color: #684f1f;
+}
+
+.body-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #bdb9b9;
-  height: 100px;
+  color: red;
 }
 
-header .menuBar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  gap: 0;
-  width: auto;
-}
-
-header .menuBar div {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color .3s;
-  height: 100%;
-  width: 100px;
-}
-
-header .menuBar div svg {
-  transition: transform .3s;
-}
-
-header .menuBar div:hover svg {
-  transform: scale(1.5);
-}
-
-header .menuBar div.active {
-  background-color: gray;
-}
-
-header .menuBar div.active svg {
-  transform: scale(1.5);
-}
-
-
-/* [project]/src/styles/bodyDashboard.scss.css [app-client] (css) */
-section {
-  width: 100%;
-}
-
-.bodyDashboard {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-.menuSide {
-  background-color: #f1f1f1;
-  min-width: 5%;
-  position: relative;
-}
-
-.displaySide {
-  background-color: #ddd;
-  min-width: 5%;
-  padding: 80px 50px;
-  height: auto;
-}
-
-.resizer {
-  cursor: ew-resize;
-  background-color: #aaa;
-  width: 5px;
-}
-
-
-/* [project]/src/styles/ProjectContent.scss.css [app-client] (css) */
-input {
-  background-color: #f5f5f5;
-  color: #000;
-  padding: 8px;
-  border: 1px solid #726e6e;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.header-container {
-  width: 100%;
-  padding: 10px 20px;
-  background-color: #4d4d60;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-container .Logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.header-container .login-wrapper {
+.body-login section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding: 100px;
 }
 
-.header-container .login-title {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 10px;
+.body-login .container-1 {
+  height: 100%;
 }
 
-.header-container .login-form {
+.body-login .container-2 .form {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 300px;
+  height: 340px;
+  padding: 20px;
+  background-color: #cdcdcd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000001a;
+}
+
+.body-login .container-2 .form .SignInForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.header-container .login-form .login-button {
-  background-color: #856825;
-  color: #fff;
-  border: none;
-  padding: 8px 25px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color .3s;
-}
-
-.header-container .login-form .login-button:hover {
-  background-color: #684f1f;
-}
-
-h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-h4 {
-  margin-bottom: 5px;
-}
-
-hr {
-  width: 100%;
-}
-
-section {
-  height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-section .TitleSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 97%;
-}
-
-section .MenuProjectSection {
-  height: 100%;
   width: 100%;
 }
 
 
-/*# sourceMappingURL=src_styles_d84dd4._.css.map*/
+/*# sourceMappingURL=src_styles_36db1b._.css.map*/
