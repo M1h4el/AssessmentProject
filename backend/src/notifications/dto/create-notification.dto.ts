@@ -1,4 +1,7 @@
 export class CreateNotificationDto {
-    from: string
-    to: []
+    notificationType: string;
+    title: string;
+    message: string;
+    createdAt: Date;
+    userId: string;
 }

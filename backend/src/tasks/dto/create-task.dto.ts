@@ -2,7 +2,9 @@ export class CreateTaskDto {
   title: string;
   description: string;
   status?: string = 'PENDING';
-  createDate: Date;
+  createdAt: Date;
   limitDate?: Date;
-  usersTaskAssigned: [];
+  userId: string;
+  idProject: string;
+  collaborators: string[];
 }

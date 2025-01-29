@@ -1,41 +1,50 @@
 /* [project]/src/styles/ProjectContent.scss.css [app-client] (css) */
-.login-container {
+.header-container {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4d4d60;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #bdb9b9;
-  padding: 20px;
-  box-shadow: 0 4px 8px #0000001a;
-  height: 100%;
+  justify-content: flex-end;
 }
 
-.login-container .login-title {
-  font-size: 2rem;
-  color: #333;
-  text-align: center;
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.login-container button {
-  background-color: #0070f3;
+.login-title {
   color: #fff;
-  padding: 20px 70px;
-  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #856825;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 8px 12px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color .3s;
-  background-color: #0070f3;
 }
 
-.login-container button:hover {
-  background-color: #005bb5;
-}
-
-.login-container form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
+.login-button:hover {
+  background-color: #684f1f;
 }
 
 h1 {

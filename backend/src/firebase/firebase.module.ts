@@ -1,6 +1,7 @@
 import { Module, Global } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { firebaseAccount } from '../config/firebase';
+import { ServiceAccount } from 'firebase-admin';
+import * as firebaseAccount from '../config/firebaseAccount.json';
 
 @Global() // Hacerlo disponible en toda la aplicación sin necesidad de importarlo en cada módulo
 @Module({
@@ -11,7 +12,7 @@ import { firebaseAccount } from '../config/firebase';
         if (!admin.apps.length) {
           // Inicializar Firebase si no está ya inicializado
           return admin.initializeApp({
-            credential: admin.credential.cert(firebaseAccount),
+            credential: admin.credential.cert(firebaseAccount as ServiceAccount),
           });
         }
         return admin.app(); // Retornar la app inicializada

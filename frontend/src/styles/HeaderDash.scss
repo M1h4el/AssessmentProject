@@ -1,12 +1,12 @@
-@use "./LogBar.scss" as *;
+@use "./LogBar.scss" as logbar;
 
 header {
-  @include flexing(null, space-between, center);
-  background-color: $primary-color;
+  @include logbar.flexing(null, space-between, center);
+  background-color: logbar.$primary-color;
   height: 100px;
 
   .menuBar {
-    @include flexing(null, center, center);
+    @include logbar.flexing(null, center, center);
     height: 100%;
     gap: 0;
     width: auto;

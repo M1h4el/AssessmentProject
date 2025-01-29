@@ -2,6 +2,7 @@ export class CreateProjectDto {
     title:string
     description:string
     status?:string = "PENDING"
-    dueDate: Date;
-    usersProject: []
+    createdAt: Date;
+    userId: string;
+    collaborators: string[];
 }

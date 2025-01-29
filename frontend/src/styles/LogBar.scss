@@ -1,9 +1,8 @@
 @use 'sass:list';
-// Variables
+
 $primary-color: #bdb9b9;
 $button-background: #0070f3;
 
-// Mixins
 @mixin buttons ($backColor, $fontColor, $padd, $marg) {
   background-color: $backColor;
   color: $fontColor;
@@ -26,29 +25,53 @@ $button-background: #0070f3;
   align-items: $align0;
 }
 
-.login-container {
-    @include flexing(null, space-between, center);
-    background-color: $primary-color;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    
-    .login-title {
-      font-size: 2rem;
-      color: #333;
-      text-align: center;
-    }
-    
-    button {
-      @include buttons($button-background, white, (20px, 70px), 0)
-    }
+.header-container {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4d4d60;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-    form {
-      @include flexing(null, center, center );
-      gap: 40px;
-    }
-    
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.login-title {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #856825;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #684f1f;
   }
+}
   
   
   

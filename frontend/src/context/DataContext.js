@@ -2,20 +2,15 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 
+
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [isLogin, setIslogin] = useState(false);
+  const backendUrl = process.env.NEXT_PUBLIC_URL_BACKEND
 
   useEffect(() => {
-    const getData = async () => {
-      // Reemplaza 'ruta-del-backend' por tu URL real
-      const response = await fetch("ruta-del-backend");
-      const json = await response.json();
-      setData(json);
-    };
-    getData();
 
     const Loged = localStorage.getItem("IsLogin");
     setIslogin(Loged === "true");

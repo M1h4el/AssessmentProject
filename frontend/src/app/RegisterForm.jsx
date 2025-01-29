@@ -1,12 +1,12 @@
 import { useData } from "@/context/DataContext";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { fetchData } from "../../utils/api";
 
 function BodyLogin() {
   const router = useRouter();
 
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,12 +14,7 @@ function BodyLogin() {
 
   const handleChangeName = (e) => {
     const { value } = e.target;
-    setName(value);
-  };
-
-  const handleChangeLastName = (e) => {
-    const { value } = e.target;
-    setLastName(value);
+    setUserName(value);
   };
 
   const handleChangeEmail = (e) => {
@@ -33,41 +28,38 @@ function BodyLogin() {
   };
 
   const handleSubmit = (e) => {
-    login();
-    router.push("/Dashboard");
+    fetchData("users", "POST", {
+      userName,
+      email,
+      password,
+    });
+    alert("Usuario registrado satisfactoriamente");
+    window.location.reload();
   };
+
 
   return (
     <div className="body-login">
-      <container id="Container1">
+      <div id="Container1">
         <div className="PresentationMP4">
-          {/* <video autoPlay loop className="Video1">
-              <source src={VideoLogin} type="video/mp4" />
-            </video> */}
+
         </div>
         <div>
           <h3 className="Slogan">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolor.
           </h3>
         </div>
-      </container>
-      <container id="Container2">
+      </div>
+      <div id="Container2">
         <div className="TitleForm">
           <h2>Registrate</h2>
         </div>
         <div className="SignInForm">
           <div className="inputLogin">
             <input
-              placeholder="Name"
-              value={name}
+              placeholder="Usuario"
+              value={userName}
               onChange={(e) => handleChangeName(e)}
-            ></input>
-          </div>
-          <div className="inputLogin">
-            <input
-              placeholder="LastName"
-              value={lastName}
-              onChange={(e) => handleChangeLastName(e)}
             ></input>
           </div>
           <div className="inputLogin">
@@ -99,7 +91,7 @@ function BodyLogin() {
             Sign up
           </button>
         </div>
-      </container>
+      </div>
     </div>
   );
 }

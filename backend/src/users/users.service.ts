@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { ConflictException, Inject, Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Firestore } from 'firebase-admin/firestore';
@@ -11,8 +11,18 @@ export class UsersService {
   ) {}
 
   async create(createUserDto: CreateUserDto) {
+    const userQuerySnapshot = await this.firestore
+      .collection('users')
+      .where('email', '==', createUserDto.email)
+      .get();
+
+    if (!userQuerySnapshot.empty) {
+      throw new ConflictException('User with this email already exists');
+    }
+
     const userRef = this.firestore.collection('users').doc();
     await userRef.set(createUserDto);
+    
     return { id: userRef.id, ...createUserDto };
   }
 

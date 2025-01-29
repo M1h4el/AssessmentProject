@@ -1,4 +1,4 @@
-@use "./LogBar.scss" as *;
+@use "./LogBar.scss" as logbar;
 
 h1 {
     font-size: 60px;
@@ -16,9 +16,9 @@ hr {
 
 section {
     height: auto;
-    @include flexing(null, flex-start, center);
+    @include logbar.flexing(null, flex-start, center);
     .TitleSection {
-        @include flexing(column, center, flex-start);
+        @include logbar.flexing(column, center, flex-start);
         width: 97%;
         
     }

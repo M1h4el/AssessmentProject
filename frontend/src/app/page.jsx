@@ -1,6 +1,6 @@
 'use client';
 
-import LogBar from '@/app/home/LogBar'
+import LogBar from './LogBar'
 import { useData } from '@/context/DataContext';
 import RegisterForm from './RegisterForm'
 
